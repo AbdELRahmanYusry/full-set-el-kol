@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from shipment.models import Shipment
-from cart.serializers import CartItemSerializer
+from carty.serializers import CartItemSerializer
 
 class ShipmentSerializer(serializers.ModelSerializer):
     cart_items = CartItemSerializer(many=True)

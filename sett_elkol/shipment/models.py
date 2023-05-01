@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cart.models import CartItem
+from carty.models import CartItem
+from django.contrib.auth import get_user_model
 
 User = get_user_model()
 

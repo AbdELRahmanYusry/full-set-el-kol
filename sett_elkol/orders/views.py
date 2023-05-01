@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from orders.models import Order
 from orders.serializers import OrderSerializer
-from cart.models import CartItem
+from carty.models import CartItem
 
 class OrderList(generics.ListCreateAPIView):
     serializer_class = OrderSerializer
@@ -28,21 +28,6 @@ class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
         instance = self.get_object()
         instance.items.update(status='incart')
         return super().destroy(request, *args, **kwargs)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,8 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from sett_elkol.meal.models import Meal
+from django.contrib.auth import get_user_model
 
-# User = get_user_model() 
+User = get_user_model() 
 
 class CartItem(models.Model):
     STATUS_CHOICES = (
@@ -20,4 +21,4 @@ class CartItem(models.Model):
 
     def __str__(self):
         return f"{self.quantity} x {self.item_name} ({self.user.username})"
-   
+ 

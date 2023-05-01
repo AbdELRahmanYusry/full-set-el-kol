@@ -99,7 +99,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "sett_elkol.users",
     "sett_elkol.common",
-    "sett_elkol.cart",
+    # "sett_elkol.cart",
     "sett_elkol.chef",
     "sett_elkol.customer",
     "sett_elkol.deliveryman",
@@ -110,6 +110,11 @@ LOCAL_APPS = [
     "sett_elkol.rate",
     "sett_elkol.shipment",
     "sett_elkol.trackorder",
+    # "sett_elkol.cartittem",
+    "sett_elkol.carty",
+    
+    
+    
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

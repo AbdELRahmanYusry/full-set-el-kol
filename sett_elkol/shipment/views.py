@@ -1,7 +1,7 @@
 from rest_framework import generics, mixins, viewsets
 from rest_framework.permissions import IsAuthenticated
-from shipment.models import Shipment
-from shipment.serializers import ShipmentSerializer
+from .models import Shipment
+from .serializers import ShipmentSerializer
 
 class ShipmentViewSet(mixins.ListModelMixin,
                       mixins.CreateModelMixin,

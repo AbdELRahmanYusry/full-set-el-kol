@@ -3,12 +3,13 @@ from django.contrib.auth.models import User
 from autoslug import AutoSlugField
 from django.contrib.auth import get_user_model
 from sett_elkol.common.models import TimeStampedUUIDModel
+from rest_framework.authtoken.models import Token
 
-from sett_elkol.cart.models import CartItem
+# from sett_elkol.carty.models import CartItem
 User = get_user_model() 
 
 
-# from carts.models import CartItem
+from carty.models import CartItem
 
 class Order(models.Model):
     STATUS_CHOICES = (

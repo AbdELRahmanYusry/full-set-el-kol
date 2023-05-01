@@ -1,5 +1,5 @@
 from django.urls import path
-# from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.urlpatterns import format_suffix_patterns
 from .views import CartItemViewSet
 
 # app_name = 'cart'
@@ -9,4 +9,4 @@ urlpatterns = [
     path('items/<int:pk>/', CartItemViewSet.as_view(), name='cartitem-detail'),
 ]
 
-# urlpatterns = format_suffix_patterns(urlpatterns)
+urlpatterns = format_suffix_patterns(urlpatterns)

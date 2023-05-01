@@ -1,8 +1,12 @@
-from django.shortcuts import render
-from .models import payment_method
-from .serializers import PaymentSerializer
-from rest_framework import viewsets 
+from rest_framework import generics
+from payment_api.models import Payment
+from payment_api.serializers import PaymentSerializer
 
-class payment_Details(viewsets.ModelViewSet):
-    queryset = payment_method.objects.all()
+class PaymentListCreateView(generics.ListCreateAPIView):
+    queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
+
+class PaymentRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
+    lookup_field = 'pk'

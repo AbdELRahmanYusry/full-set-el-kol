@@ -1,13 +1,9 @@
-from django.urls import path ,include
-# from .views import payment_Details
-from rest_framework.routers import DefaultRouter
-
-router = DefaultRouter()
-router.register('payment/details/', views.payment_Details)
+from django.urls import path, include
+from payment_api.views import PaymentListCreateView, PaymentRetrieveUpdateDeleteView
 
 urlpatterns = [
-    path("viewsets/", include(router.urls)),
+    path('api/', include([
+        path('payments/', PaymentListCreateView.as_view(), name='payment-list-create'),
+        path('payments/<int:pk>/', PaymentRetrieveUpdateDeleteView.as_view(), name='payment-retrieve-update-delete'),
+    ])),
 ]
-
-
-

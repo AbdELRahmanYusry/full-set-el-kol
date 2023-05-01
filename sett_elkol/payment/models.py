@@ -1,13 +1,7 @@
 from django.db import models
-from autoslug import AutoSlugField
-from django.contrib.auth import get_user_model
-from sett_elkol.common.models import TimeStampedUUIDModel
 
-class payment_method(TimeStampedUUIDModel):
-    card_number = models.IntegerField(blank=True, null=True)
-    slug = AutoSlugField(populate_from="card_number", always_update=True, unique=True)
-    Bank = models.CharField(max_length=30)
-    
-    
-    
-    
+class Payment(models.Model):
+    order_id = models.IntegerField()
+    payment_method = models.CharField(max_length=50)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    payment_date = models.DateTimeField(auto_now_add=True)
