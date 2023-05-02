@@ -94,9 +94,12 @@ THIRD_PARTY_APPS = [
     "drf_spectacular",
     "djoser",
 
+    # "sett_elkol.carty",
+
 ]
 
 LOCAL_APPS = [
+    "sett_elkol.carty",
     "sett_elkol.users",
     "sett_elkol.common",
     # "sett_elkol.cart",
@@ -111,7 +114,6 @@ LOCAL_APPS = [
     "sett_elkol.shipment",
     "sett_elkol.trackorder",
     # "sett_elkol.cartittem",
-    "sett_elkol.carty",
     
     
     
